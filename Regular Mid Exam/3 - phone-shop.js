@@ -35,9 +35,11 @@ function phoneShop(input){
             case 'Last':
                 if (phones.includes(firsArgument)) {
                     const indexFrom = phones.indexOf(firsArgument);
-                    const element = phones.splice(indexFrom, 1)[3];
+                    const element = phones.splice(indexFrom, 1)[0];
+                    // console.log(indexFrom);
+                    // console.log(element);
                     if (indexFrom > -1) {
-                        phones.splice(indexFrom, 0, element);
+                        phones.splice(1, 0, element);
                     }
                 }
                 break;
@@ -47,4 +49,4 @@ function phoneShop(input){
         console.log(phones.join(', '));
 }
 
-phoneShop(["HuaweiP20, XiaomiNote", "Remove - Samsung", "Bonus phone - XiaomiNote:Iphone5", "End"]);
+phoneShop(["SamsungA50, MotorolaG5, HuaweiP10", "Last - SamsungA50", "Add - MotorolaG50", "End"]);

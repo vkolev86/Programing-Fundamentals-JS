@@ -7,7 +7,7 @@ function houseParty(input){
         let command = el.split(' ');
         let name = command[0];
 
-        if (command.lenght === 3) {
+        if (command.length === 3) {
             if (guestsArray.includes(name)) {
                 console.log(`${name} is already in the list!`);
             } else {
