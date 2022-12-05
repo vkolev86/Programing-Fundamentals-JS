@@ -2,6 +2,7 @@ function wildZoo(input){
     let currentLine = input.shift();
     let animals = {};
     let arr = [];
+    let areaCount = 0;
 
     while (currentLine !== 'EndDay') {
         let token = currentLine.split(': ');
@@ -16,13 +17,12 @@ function wildZoo(input){
         let result = arr.find((x) => x.animalName === animalName);
         let index = arr.indexOf(result);
 
-        let areaResult = arr.find((x) => x.area === area);
-
         switch (command) {
             case 'Add':
                 if (result) {
                     arr[index].foodQuantity += foodQuantity;
                 } else {
+                    token.forEach(function (x) { area[x] = (area[x] || 0) + 1; areaCount +=1; });
                     animals = {animalName, foodQuantity, area, areaCount};
                     arr.push(animals);
                 }
@@ -44,6 +44,7 @@ function wildZoo(input){
         arr.forEach(e => console.log(` ${e.animalName} -> ${e.foodQuantity}g`));
         console.log(`Areas with hungry animals:`);
         arr.forEach(a => console.log(`${a.area}: ${a.areaCount}`));
+        console.log(`${animals.area}: ${animals.areaCount}`);
     }
     
 }
