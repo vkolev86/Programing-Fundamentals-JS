@@ -43,7 +43,6 @@ function wildZoo(input){
         console.log(`Animals:`);
         arr.forEach(e => console.log(` ${e.animalName} -> ${e.foodQuantity}g`));
         console.log(`Areas with hungry animals:`);
-        arr.forEach(a => console.log(`${a.area}: ${a.areaCount}`));
         console.log(`${animals.area}: ${animals.areaCount}`);
     }
     
