@@ -49,4 +49,4 @@ function phoneShop(input){
         console.log(phones.join(', '));
 }
 
-phoneShop(["SamsungA50, MotorolaG5, HuaweiP10", "Last - SamsungA50", "Add - MotorolaG50", "End"]);
+phoneShop(["HuaweiP20, XiaomiNote","Remove - Samsung","Bonus phone - XiaomiNote:Iphone5","End"]);
